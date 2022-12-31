@@ -1,71 +1,128 @@
-<!DOCTYPE html>
-<html>
+* {
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="utf-8">
-    <title>Module 2 - Assignement</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+body {
+    background-color: white;
+}
 
-<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+h1 {
+    margin: 100px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 175%;
+}
 
+section {
+    position: relative;
+    padding: 15px;
+    width: 100%;
+}
 
-<body>
-    <h1>Our Menu</h1>
-    <section class="column-lg-4 colmn-md-6 colmn-sm-12">
-        <div>
-            <p class="chicken">Chicken</p>
-            <p class="content_text">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            </p>
-        </div>
-    </section>
-    <section class="column-lg-4 colmn-md-6 colmn-sm-12">
-        <div>
-            <p class="beef">Beef</p>
-            <p class="content_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-        </div>
-    </section>
-    <section class="column-lg-4 colmn-md-12 colmn-sm-12">
-        <div>
-            <p class="sushi">Sushi</p>
-            <p class="content_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-        </div>
-</body>
+p {
+    position: relative;
+    clear: right;
+}
 
-</html><!DOCTYPE html>
-<html>
+div {
+    position: relative;
+    background-color: gray;
+    border: 1px solid black;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
 
-<head>
-    <meta charset="utf-8">
-    <title>Module 2 - Assignement</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+.chicken {
+    float: right;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    background-color: rgb(214, 124, 124);
 
-<link rel="stylesheet" type="text/css" href="/CSS/style.css">
+}
 
+.beef {
+    float: right;
+    color: white;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    background-color: maroon;
 
-<body>
-    <h1>Our Menu</h1>
-    <section class="column-lg-4 colmn-md-6 colmn-sm-12">
-        <div>
-            <p class="chicken">Chicken</p>
-            <p class="content_text">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            </p>
-        </div>
-    </section>
-    <section class="column-lg-4 colmn-md-6 colmn-sm-12">
-        <div>
-            <p class="beef">Beef</p>
-            <p class="content_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-        </div>
-    </section>
-    <section class="column-lg-4 colmn-md-12 colmn-sm-12">
-        <div>
-            <p class="sushi">Sushi</p>
-            <p class="content_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-        </div>
-</body>
+}
 
-</html>
+.sushi {
+    color: black;
+    float: right;
+    width: 100px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    background-color: rgb(223, 212, 121);
+
+}
+
+.content_text {
+    padding: 5px;
+    border: none;
+    background-color: gray;
+    margin: 2.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    margin: 5px;
+    height: 200px;
+    overflow: auto;
+}
+
+.row {
+    width: 90%;
+}
+
+/*Large screen-desktop*/
+@media (min-width: 992px) {
+    .column-lg-4 {
+        float: left;
+        width: 33.33%;
+
+    }
+}
+
+/*medium screens- tablets*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .colmn-md-6 {
+        float: left;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .colmn-md-12 {
+        float: left;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*small screens - mobiles*/
+@media (max-width: 767px) {
+    .colmn-sm-12 {
+        float: left;
+        width: 100%;
+    }
+}
